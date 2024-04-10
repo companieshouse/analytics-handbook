@@ -1,0 +1,90 @@
+---
+title: "Getting started"
+---
+
+> TODO: What onboarding material to we currently have? Do teams have things already which we should look to include?
+
+This section describes a typical onboarding process for an analyst at Companies House, including getting the necessary access to tools and data.
+
+Most analysts at Companies House will use a laptop running Windows. This section describes how to set up a Windows device for analytical use.
+
+## Install Windows Terminal
+
+The Windows Terminal app can be [installed from the Microsoft Store](https://apps.microsoft.com/detail/9n0dx20hk701).
+
+## Install Visual Studio Code
+
+Visual Studio Code (VS Code) is a free and open source code editor that is very popular among data scientists and data engineers. It can be downloaded from [here](https://code.visualstudio.com/).
+
+VS Code can be installed via PowerShell by running the following:
+
+```ps
+winget install -e --id Microsoft.VisualStudioCode
+```
+
+We recommend using VS Code for programming in most languages. R users [may prefer RStudio](#install-rstudio) but should continue to install VS Code too. More information on using R in VS Code can be found [here](/integrated-development-environments/vscode.qmd#using-r-in-vs-code).
+
+Further information about setting up VS Code, once installed, can be found in the [VS Code](/integrated-development-environments/vscode.qmd) section.
+
+## Install R and RStudio
+
+R is a free and open-source statistical programming language which is popular with statisticians and analysts. RStudio is a popular integrated development environment (IDE) for R.
+
+- R can be installed on Windows from [here](https://cloud.r-project.org/).
+- RStudio can be installed from [here](https://www.rstudio.com/products/rstudio/download/).
+
+R and RStudio can be installed via PowerShell by running the following:
+
+```ps
+winget install -e --id RProject.R
+winget install -e --id RProject.Rtools
+winget install -e --id Posit.RStudio
+```
+
+More information about setting up RStudio can be found in the [RStudio section](/integrated-development-environments/rstudio.qmd).
+
+## Install Python
+
+Python is a more general programming language which is also popular, particularly among data scientists.
+
+- Python can be installed from [here](https://www.python.org/downloads/).
+
+Python can be installed via PowerShell by running the following:
+
+```ps
+winget install -e --id Python.Python.3.12
+```
+
+## Set up Git and GitHub
+
+Git is a version control system that is used to organise and track changes to code. GitHub is a website which can be used alongside Git to share code and collaborate with other analysts.
+
+Create a Github account if you don't already have one. You can sign up [here](https://github.com/join). We recommend choosing a username that is similar to your name, such as using your Companies House username. If you already have an account, you should add your Companies House email address to your Github account.
+
+You should request access to the Companies House Github organisation on the [#github-admins](https://companieshouse.slack.com/archives/CCN1TUSHZ) channel on the Companies House slack.
+
+- Git can be installed from [here](https://git-scm.com/download/win).
+
+Git can be installed via PowerShell by running the following:
+
+```ps
+winget install -e --id Git.Git
+```
+Once installed, you should let Git know your GitHub username and email by replacing those details below.
+
+```ps
+git config --global user.name "my_github_username"
+git config --global user.email "xxx@companieshouse.gov.uk"
+```
+
+Further details of how to set up Git can be found in the [Git section](/git/index.qmd#set-up-git).
+
+### Verify who you are
+
+In Git, anyone can set their email address to whatever they want when making commits, meaning they can impersonate someone else's identity. To prevent this, it's important to [sign your commits](https://docs.github.com/en/authentication/managing-commit-signature-verification/about-commit-signature-verification), which adds a unique cryptographic signature to verify that the commit was made by you and hasn't been tampered with. This helps maintain trust and security within Git and platforms like GitHub.
+
+We recommend following [GPG commit signature verification](https://docs.github.com/en/authentication/managing-commit-signature-verification/about-commit-signature-verification#gpg-commit-signature-verification). 
+
+## Get access to data
+
+> TODO: What is the process for accessing data. Who can access which database. How to get a password. How to set up VS Code extensions to access databases.

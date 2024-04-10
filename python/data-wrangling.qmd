@@ -1,0 +1,87 @@
+---
+title: "Data wrangling with Python"
+---
+
+Pandas is by far the most common data wrangling library in Python, Its functionality is most comprehensively covered in [Python for Data Analysis](https://wesmckinney.com/book/). Pandas relies [heavily on its index functionality](https://wesmckinney.com/book/pandas-basics#pandas_index_objects), which controls whether an operation  and uses the NumPy library as its basis. It is somewhat based upon base R. Many of its methods make it easier to work with data which isn't in a tidy format, and it predates R's tidyverse by several years.
+
+In more recent times, other libraries such as [Polars](https://pola.rs) and [ibis](https://github.com/ibis-project/ibis) have appeared.
+
+- Polars is based on the Rust programming language and [Apache Arrow](https://arrow.apache.org/), and boasts big performance and the ability to handle datasets which are larger than your computer's available memory.
+- ibis provides a common API for connecting to multiple data sources, and most notably allows you to query SQL databases using Python code.
+
+Polars and ibis have nice APIs, with function and method names which more closely resemble SQL. They are optimised for working with tidy data, and so we recommend considering them for newer projects.
+
+## Links
+
+- [Python for Data Analysis](https://wesmckinney.com/book/): This book is written by Wes McKinney, the creator of the Pandas data analysis library. It gives an introduction to using Python and Jupyter notebooks, as well as Python libraries such as Pandas and NumPy.
+- The [Polars User Guide](https://docs.pola.rs/user-guide/getting-started/) has guidance on getting started with Polars.
+
+## Examples
+
+Here we give an example of the commands used in both `pandas` and `polars` to wrangle the [`diamonds`](https://raw.githubusercontent.com/tidyverse/ggplot2/main/data-raw/diamonds.csv) dataset.
+
+| Operation                | Pandas                                                     | Polars                                                               |
+| ------------------------ | ---------------------------------------------------------- | -------------------------------------------------------------------- |
+| **Selecting columns**    | `df[["col1", "col2"]]`                                     | `df.select(["col1", "col2"])`                                        |
+| **Creating new columns** | `df.assign(new_col=lambda df: df["col1"] + df["col2"])`    | `df.with_columns(new_col=pl.col("col1") + pl.col("col2"))`           |
+| **Filtering rows**       | `df.loc[df["col"] > value]` or `df.query("col > @value")`  | `df.filter(pl.col("col") > value)`                                   |
+| **Group by**             | `df.groupby("key")`                                        | `df.group_by("key")`                                                 |
+| **Aggregate**            | `df.agg(col_mean=("col", "mean"), col_sum=("col", "sum"))` | `df.agg(col_mean=pl.col("col").mean(), col_sum=pl.col("col").sum())` |
+| **Sorting**              | `df.sort_values("col", ascending=False)`                   | `df.sort("col", descending=True)`                                    |
+|                          |                                                            |                                                                      |
+
+### Pandas
+
+```{python}
+import pandas as pd
+
+df = pd.read_csv(
+    "https://raw.githubusercontent.com/tidyverse/ggplot2/main/data-raw/diamonds.csv"
+)
+
+df = df.rename(columns={"color": "colour"})
+
+(
+    df[["cut", "colour", "price"]]
+    .loc[df["cut"].isin(["Ideal", "Premium"])]
+    .assign(price_gbp=lambda df: df["price"] * 1.51)
+    .groupby(["cut", "colour"])
+    .agg(
+        avg_price=("price_gbp", "mean"),
+        price_range=("price_gbp", lambda x: max(x) - min(x)),
+        count=("price_gbp", "count"),
+    )
+    .sort_values("avg_price", ascending=False)
+    .reset_index()
+    .head()
+)
+```
+
+### Polars
+
+```{python}
+import polars as pl
+
+df = pl.read_csv(
+    "https://raw.githubusercontent.com/tidyverse/ggplot2/main/data-raw/diamonds.csv"
+)
+
+df = df.rename({"color": "colour"})
+
+(
+    df.select(["cut", "colour", "price"])
+    .filter(pl.col("cut").is_in(["Ideal", "Premium"]))
+    .with_columns(price_gbp=pl.col("price") * 1.51)
+    .group_by(["cut", "colour"])
+    .agg(
+        avg_price=pl.col("price_gbp").mean(),
+        price_range=pl.col("price_gbp").map_elements(
+            lambda x: max(x) - min(x), return_dtype=pl.Float64
+        ),
+        count=pl.col("price_gbp").count(),
+    )
+    .sort("avg_price", descending=True)
+    .head()
+)
+```
+

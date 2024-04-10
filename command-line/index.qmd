@@ -1,0 +1,42 @@
+---
+title: "Using the command line"
+---
+
+The command line is a powerful tool for interacting with your computer's operating system. It allows us to perform tasks, navigate files and directories, and execute programs — all through text-based commands.
+
+
+## Links
+
+- [Data Science at the Command Line](https://jeroenjanssens.com/dsatcl/): A comprehensive resource for using the command line in data science workflows.
+- [Bash Introduction](https://learn.microsoft.com/en-us/training/modules/bash-introduction/): Microsoft's training module offering an introduction to Bash scripting and command line usage.
+
+
+## Getting Help
+
+When you're unsure about how to use a command, you can often find helpful information by appending `-h` or `--help` after the command. For example, typing `ls --help` will display information about the `ls` command, which lists directory contents.
+
+## Basic Commands
+
+There are several fundamental commands you'll frequently use on the command line. Here are some of the most common ones:
+
+- `echo` prints a string to the terminal.
+- `ls -a` lists all files, including hidden ones.
+- `cd` changes the current directory.
+- `mkdir` creates a new directory.
+- `code .` opens the current directory in Visual Studio Code.
+- `cp` copies a file.
+- `mv` moves a file.
+- `rm` removes a file.
+- `touch` creates a new file.
+- `cat` displays the contents of a file.
+- `less` displays the contents of a file, one page at a time.
+- `head` displays the first few lines of a file.
+- `tail` displays the last few lines of a file.
+- `grep` searches for a string in a file.
+
+## Handy Shortcuts
+
+Remembering a few keyboard shortcuts can make your command line experience smoother:
+
+- <kbd>Ctrl</kbd> + <kbd>C</kbd>: Stops the currently running command.
+- <kbd>Ctrl</kbd> + <kbd>L</kbd>: Clears the screen, providing a clean slate.

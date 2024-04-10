@@ -1,0 +1,35 @@
+---
+title: "Data modelling"
+---
+
+> TODO: Explain medallion architecture, Kimball, star schemas, snowflake schemas, measures and dimensions, "one big table" etc.
+
+```{mermaid}
+erDiagram
+  Teacher ||--o{ Course : teaches
+  Course ||--o{ Student : enrolls
+
+  Teacher {
+    string teacher_id
+    string name
+    string department
+  }
+
+  Course {
+    string course_id
+    string name
+    string description
+    string teacher_id
+  }
+
+  Student {
+    string student_id
+    string name
+    int age
+  }
+
+```
+
+Double line means one and only one.
+Crows foot means one or more.
+Circle and crows foot means zero or more.

@@ -1,0 +1,37 @@
+---
+title: "Data visualisation with R"
+---
+
+> TODO: How to make good charts using `ggplot2`. Is there a maintained government ggplot theme in a package somewhere?
+
+```{r}
+#| code-fold: true
+
+library(tibble)
+
+colours_data <- tribble(
+  ~colour,         ~hex,
+  "Dark blue",    "#12436D",
+  "Turquoise",    "#28A197",
+  "Dark pink",    "#801650",
+  "Orange",       "#F46A25",
+  "Dark grey",    "#3D3D3D",
+  "Light purple", "#A285D1",
+)
+
+# Create a random dataset for y-values
+set.seed(123)  # Set seed for reproducibility
+random_heights <- sample(10:100, nrow(colours_data), replace = TRUE)
+
+colours_data <- cbind(colours_data, height = random_heights)
+
+library(ggplot2)
+
+ggplot(colours_data, aes(x = colour, fill = hex, y = height)) +
+  geom_bar(stat = "identity") +
+  scale_fill_identity() +
+  labs(title = "Colour Bar Chart with Random Heights",
+       x = "Colour",
+       y = "Height") +
+  theme_minimal()
+```

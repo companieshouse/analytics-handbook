@@ -1,0 +1,48 @@
+---
+title: "Testing with R"
+---
+
+> TODO: Explain `testthat`. Advice for testing data assumptions.
+
+## Links
+
+- https://r-pkgs.org/testing-basics.html
+- https://style.tidyverse.org/tests.html
+
+## Writing tests
+
+```{r}
+#| filename: multiply.R
+
+#' Multiply Function
+#'
+#' This function multiplies two numbers.
+#'
+#' @param x A numeric value.
+#' @param y A numeric value.
+#' @return The product of x and y.
+#' @examples
+#' multiply(3, 4)
+#' multiply(0.5, 2)
+#' @export
+multiply <- function(x, y) {
+  return(x * y)
+}
+
+```
+
+```{r}
+#| echo: false
+library(testthat)
+```
+
+```{r}
+#| filename: tests/testthat/test-multiply.R
+
+test_that("multiply function works correctly", {
+  expect_equal(multiply(3, 4), 12)
+  expect_equal(multiply(0.5, 2), 1)
+  expect_equal(multiply(-2, -5), 10)
+})
+
+```

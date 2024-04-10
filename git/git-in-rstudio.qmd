@@ -1,0 +1,9 @@
+---
+title: Using Git in RStudio
+---
+
+> TODO: Explain the help RStudio can give with using Git. RStudio projects.
+
+## Links
+
+- [Happy Git and GitHub for the useR](https://happygitwithr.com/)

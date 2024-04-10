@@ -1,0 +1,19 @@
+---
+title: "Programming with R"
+---
+
+R is a free and open-source statistical programming language which is popular with statisticians and analysts. Many analysts with experience in proprietary tools such as SAS, SPSS, Stata have begun to explore R as an alternative. Because R is open-source, it benefits from a large community of who share learning materials contribute packages to the R ecosystem which extend its functionality.
+
+[R for Data Science](https://r4ds.hadley.nz/) is the most comprehensive resource for learning R. It is a free online book that covers the basics of R programming and the tidyverse, a collection of R packages that share a common design philosophy which makes them easier to learn and use.
+
+R comes with a set of functions and packages that are included with the core installation, sometimes referred to as [base R](https://r4ds.hadley.nz/base-r). These functions provide basic functionality for data manipulation, statistical analysis and plotting. It's not possible to use the tidyverse without using some base R functions, but analysis and plotting in base R have a significantly different look and feel to functions from the tidyverse.
+
+Many beginners are first exposed to base R and may miss out experiencing the tidyverse. The tidyverse dramatically changed the way R is used, and because of this there has been some [debate whether to teach the tidyverse first](http://varianceexplained.org/r/teach-tidyverse/). We recommend following [R for Data Science](https://r4ds.hadley.nz/) and becoming familiar with the tidyverse.
+
+## Links
+
+- [R for Data Science](https://r4ds.hadley.nz/): A comprehensive guide covering data import, tidying, visualisation, and modelling in R.
+- [STAT 545: Data wrangling, exploration, and analysis with R](https://stat545.com/): An online course focused on practical data wrangling, exploration, and analysis using R.
+- [Hands-On Programming with R](https://rstudio-education.github.io/hopr/): A resource for learning R programming with practical examples and exercises.
+- [Tidy Modeling with R](https://www.tmwr.org/): Explores tidy modelling principles in R, emphasising clear workflows for building and deploying predictive models.
+- [ggplot2: Elegant Graphics for Data Analysis](https://ggplot2-book.org/): A must-read for creating beautiful and informative visualisations in R using ggplot2.

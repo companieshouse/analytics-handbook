@@ -1,0 +1,40 @@
+---
+title: "Starting a new R project"
+---
+
+## Links
+
+- [Using RStudio Projects](https://support.posit.co/hc/en-us/articles/200526207-Using-RStudio-Projects): A detailed guide on utilising RStudio projects effectively for organising your R workspaces.
+- [Workflow: Scripts](https://r4ds.hadley.nz/workflow-scripts): Insights from the "R for Data Science" book on structuring your R projects and scripts for optimal workflow.
+- [renv: Project Environments for R](https://rstudio.github.io/renv/articles/renv.html): Information about `renv`, a tool for managing project environments in R, ensuring reproducibility and dependency management.
+
+
+## RStudio projects
+
+RStudio provides a convenient feature called projects, which allows you to organise your work within a dedicated workspace. Projects help keep your files, data, and packages neatly organised.
+
+[R for Data Science](https://r4ds.hadley.nz/workflow-scripts) provides advice on saving and naming files to help organise a project's resources.
+
+Name your project using `kebab-case`.
+
+## Git
+
+Git can be initialised by running `git init` from your project directory.
+
+R projects should include a `.gitignore` file to exclude sensitive files, such as API keys or personal configurations, from being tracked by Git.
+
+If your project contains data extracts which contain private or sensitive data, it is important that you add the folder which contains the data to the `.gitignore`.
+
+A recommended `.gitignore` file for R projects can be found [here](https://github.com/github/gitignore/blob/main/R.gitignore). Ensure that sensitive files, such as `.env` files containing environment variables, are listed in a `.gitignore` to prevent them from being inadvertently shared or exposed.
+
+## Reproducible environments
+
+The `renv` package in R enables having separate environments for different projects. It helps ensure that the packages you use for one project don't interfere with those of another, keeping everything organised and reproducible. 
+
+Packages and versions of R regularly update. Over time, this can cause code to break - e.g. if different dependencies are required for later versions of packages to work. Using `renv` creates a snapshot of the code and packages at the time of creation, which anyone can then recreate when they come to use the code.
+
+If different projects use different versions of packages, `renv` ensures that each project has its own isolated environment where these specific package versions are installed, preventing conflicts and maintaining consistency within each project.
+
+Just as in Python, where we create virtual environments to keep the project's dependencies separate, `renv` does the same for R. 
+
+You should use the `renv` package for package and version control in R. `renv` can be initiated by running `renv::init()`, and an introduction can be found [here](https://rstudio.github.io/renv/articles/renv.html).

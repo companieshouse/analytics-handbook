@@ -1,0 +1,11 @@
+---
+title: "Data wrangling with R"
+---
+
+> TODO: Signpost to R for Data Science and the main libraries for data wrangling in R. Show what it looks like in base R for contrast. Explain `dbplyr` for connecting to databases. Reference `data.table`.
+
+## Links
+
+- https://r4ds.hadley.nz/data-transform
+- https://r4ds.hadley.nz/data-tidy
+- https://r4ds.hadley.nz/transform

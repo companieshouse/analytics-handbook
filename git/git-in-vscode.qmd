@@ -1,0 +1,9 @@
+---
+title: "Using Git in VS Code"
+---
+
+> TODO: Explain the help VS Code can give with using Git. Extensions for Git and Github.
+
+## Links
+
+- https://code.visualstudio.com/docs/sourcecontrol/overview

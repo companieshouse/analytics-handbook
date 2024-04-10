@@ -1,0 +1,170 @@
+---
+title: "R style guide"
+---
+
+In general we recommend adopting the [tidyverse style guide](https://style.tidyverse.org/). To summarise:
+
+- Use `snake_case` to name variables and functions.
+- Use meaningful names.
+- Name variables after nouns, but functions after verbs.
+- Aim for 80 characters per line.
+- Punctuate as you would in English.
+
+## Select elements with `[[]]`
+
+We prefer square brackets `[[]]` to select elements over using `$`.
+
+```{r}
+#| eval: false
+
+my_list <- list(x = 1, y = 2)
+
+# Good
+
+my_list[["x"]]
+
+# Bad
+
+my_list$x
+```
+
+## Name functions after verbs
+
+Functions are used to perform an action. By naming a function after a verb, using the active voice, our code self-describes itself. Avoid generic and non-descriptive names such as `get_info` or `process_data`. Functions which are verbs work well with the pipe (`|>` or `%>%`) syntax.
+
+```{r}
+#| eval: false
+
+# Good
+
+calculate_total <- function(x) {
+    sum(x)
+}
+
+# Bad
+
+total <- function(x) {
+    sum(x)
+}
+
+get_info <- function(x) {
+    # ...
+}
+
+```
+
+## Write pure functions
+
+Pure functions are [described in Advanced R](https://adv-r.hadley.nz/fp.html#functional-programming-languages).
+
+> Secondly, many functional languages require functions to be pure. A function is pure if it satisfies two properties:
+>
+> - The output only depends on the inputs, i.e. if you call it again with the same inputs, you get the same outputs. This excludes functions like `runif()`, `read.csv()`, or `Sys.time()` that can return different values.
+>
+> - The function has no side-effects, like changing the value of a global variable, writing to disk, or displaying to the screen. This excludes functions like `print()`, `write.csv()` and `<-`.
+
+Pure functions are functions that produce the same output for the same inputs every time they are called. They don't rely on or change any external state, such as global variables or files. In this example, the `add` function uses a global variable `N` that is defined outside of the function. This means the function's result depends on a variable that is not passed as an input to the function.
+
+```{r}
+N <- 2
+
+add <- function(x) {
+    x + N
+}
+
+result <- add(5)
+print(result)
+```
+
+To make the function pure, we can modify it to explicitly take all its dependencies as inputs:
+
+```{r}
+add <- function(x, n) {
+    x + n
+}
+
+N <- 2
+result <- add(5, n = N)
+print(result)
+```
+
+## Avoid for-loops
+
+In general we should [avoid for-loops in favour of using `purrr`](#use-purrr). There are generally better ways of solving problems in R without the need for a for-loop.
+
+However, if we do use a for-loop we should use `seq_along` in the construction of the loop. [The first edition of R for Data Science shows](https://r4ds.had.co.nz/iteration.html#for-loops) how not using `seq_along` can end up producing bugs in edge cases.
+
+```{r}
+#| eval: false
+
+values <- c(1, 2, 3, 4, 5)
+
+# Good
+
+for (i in seq_along(values)) {
+  print(i)
+}
+
+# Bad
+
+for (i in 1:length(values)) {
+  print(i)
+}
+```
+
+### Use `purrr` 
+
+The `purrr` package is designed to help avoid writing for-loops. Its usage is [described in Advanced R](https://adv-r.hadley.nz/functionals.html#functionals).
+
+When writing code with R loops we are often forced to write code for storing the results of our code, which can often cause our code to become much slower, more difficult to understand and make it harder to recover from unexpected results.
+
+Consider the following for loop:
+
+```{r}
+values <- c(1, 2, 3, 4, 5)
+
+# We create an empty vector, which has the same length of our values vector.
+# This vector will store the results of our loop.
+
+squared_values <- numeric(length(values))
+
+# The loop modifies each element of our squared_values vector in turn.
+for (i in seq_along(values)) {
+  squared_values[i] <- values[i] ^ 2
+}
+
+print(squared_values)
+```
+
+In the above code we had to create a placeholder `squared_values` vector and give it a length. That vector was later populated inside the loop. By using `purrr`, we don't have to worry about doing that.
+
+```{r}
+library(purrr)
+
+values <- c(1, 2, 3, 4, 5)
+squared_values <- map_dbl(values, function(x) x^2)
+
+print(squared_values)
+```
+
+## Write anonymous functions verbosely
+
+An anonymous function is a throw-away function that doesn't get assigned a name, similar to a lambda function in Python.
+
+The `purrr` package [provides a shortcut for specifying anonymous functions](https://adv-r.hadley.nz/functionals.html?#purrr-shortcuts). We recommend not using this and instead writing anonymous functions verbosely, without using the shortcut.
+
+```{r}
+#| eval: false
+
+library(purrr)
+
+# Good
+
+values <- c(1, 2, 3, 4, 5)
+squared_values <- map_dbl(values, function(x) x^2)
+
+# Bad
+
+values <- c(1, 2, 3, 4, 5)
+squared_values <- map_dbl(values, ~ .^2)
+```

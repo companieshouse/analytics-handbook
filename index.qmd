@@ -1,0 +1,17 @@
+---
+title: "Welcome!"
+number-sections: false
+---
+
+This site is a collection of resources for analytical and data professionals at Companies House. It is a work in progress.
+
+The handbook is created and published using [Quarto](https://quarto.org/). Its source code is [available publicly on GitHub](https://github.com/companieshouse/analytics-handbook).
+
+All content is available under the [Open Government Licence v3.0](https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/), except where otherwise stated.
+
+
+### Other inspiration
+
+The cross-government [Data Science Slack](https://govdatascience.slack.com) is a great place to connect with fellow members of the analyst, data scientist and data engineer communities. To join the cross-government data science Slack, you will need to use your public sector email address.
+
+The Department for Education have also made their [analysts' guide](https://dfe-analytical-services.github.io/analysts-guide/) publicly available.

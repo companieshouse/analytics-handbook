@@ -1,0 +1,84 @@
+---
+title: "What should I learn?"
+---
+
+Our team is made up of several different professions, each with their own unique skill sets and preferences for tools and languages. Most of this guidance is likely to be useful in developing a well-rounded analytics skillset, but our goal is to advise each profession on the most commonly used tools and languages and to provide a starting point for learning how to use these.
+
+At Companies House, we primarily make use of R, Python and SQL. We also use a variety of tools and IDEs such as Visual Studio Code and RStudio. Power BI is our primary business intelligence tool.
+
+[Getting started](/getting-started.qmd) is a good place to start if you're new to analytics at Companies House. It describes the installation process for the tools and languages we use.
+
+## Recommended learning
+
+The following are a good place for start for all analytics professionals at Companies House.
+
+- [Getting started](/getting-started.qmd)
+- [Writing about analysis](/writing-about-analysis.qmd)
+- [General progrmaming practices](/programming-practices.qmd)
+- [Quality assurance](/quality-assurance.qmd)
+
+In addition to these we provide specific recommendations the different professions:
+
+- [Data Analysts](#data-analysts)
+- [Statisticians](#statisticians)
+- [Data Scientists](#data-scientists)
+- [Data Engineers](#data-engineers)
+
+## Data Analysts
+
+Data analyst may be used to refer to the [data analyst role](https://ddat-capability-framework.service.gov.uk/role/data-analyst) outlined in the Government Digital and Data Profession Capability Framework or [other analytical professions](https://analysisfunction.civilservice.gov.uk/about-us/membership/) such as [statisticians](#statisticians). Within industry, data analysts often work on business intelligence and reporting, using tools such as Power BI and SQL.
+
+### Recommended learning
+
+- [Data visualisation](/data-visualisation.qmd)
+- [Using Power BI](/power-bi/index.qmd)
+- [Using SQL](/sql/index.qmd)
+- [Version control with git](/git/index.qmd)
+- [Programming with R](/r/index.qmd)
+
+For data analysts we recommend learning R, as R is a language specifically designed for statistics and data analysis and is commonly used by the analytical community across government. R offers a collection of packages known as the tidyverse, which are designed to work together to make data analysis easier, with a syntax which is easy to read and remember. These packages can offer a gentle introduction to statistical programming for those who have not programmed before.
+
+## Statisticians
+
+Statisticians are badged members of the Government Statistics profession and meet [the requirements](https://analysisfunction.civilservice.gov.uk/government-statistical-service-and-statistician-group/gss-careers-and-learning/joining-us/) for membership of the [Government Statistical Group](https://analysisfunction.civilservice.gov.uk/policy-store/competency-framework-for-the-government-statistician-group-gsg/).
+
+While many of the skills overlap with those of data analysts, statisticians will have a particular understanding of the strengths, limitations, assumptions and interpretations of statistical techniques. They have experience in communicating the quality and uncertainty of statistical outputs and lead in the application of the [Statistics Code of Practice](https://code.statisticsauthority.gov.uk/).
+
+Statisticians may be involved in the production of official statistics, using skills in building [Reproducible Analytical Pipelines](https://analysisfunction.civilservice.gov.uk/support/reproducible-analytical-pipelines/). Similarly to data analysts, we recommend learning R.
+
+### Recommended learning
+
+- [Data visualisation](/data-visualisation.qmd)
+- [Programming with R](/r/index.qmd)
+- [Reproducible Analytical Pipelines](/reproducible-analytical-pipelines.qmd)
+- [Quarto](/quarto/index.qmd)
+- [Version control with git](/git/index.qmd)
+- [Using SQL](/sql/index.qmd)
+
+## Data Scientists
+
+Data scientists use a range of tools and techniques, including machine learning and predictive analytics, to uncover patterns in data and transform them into actionable insights. Data scientists will have particular skills in finding opportunities to better use data to drive operational efficiencies.
+
+Data scientist may refer to the [data scientist role](https://ddat-capability-framework.service.gov.uk/role/data-scientist) from the Government Digital and Data Profession Capability Framework. Some data scientists may also be badged [statisticians](#statisticians), sometimes referred to as statistical data scientists.
+
+### Recommended learning
+
+- [Using SQL](/sql/index.qmd)
+- [Programming with Python](/python/index.qmd)
+- [Data visualisation](/data-visualisation.qmd)
+- [Version control with git](/git/index.qmd)
+
+## Data Engineers
+
+Data Engineers are responsible for building and maintaining the systems that allow data to be collected, stored and processed. They are responsible for the design, construction and maintenance of the data architecture, and for ensuring that the data is available and accessible to the people who need it.
+
+The [data engineer role](https://ddat-capability-framework.service.gov.uk/role/data-engineer) is part of the Government Digital and Data Profession Capability Framework.
+
+### Recommended learning
+
+- [Using Snowflake](/data-engineering/snowflake.qmd)
+- [Using SQL](/sql/index.qmd)
+- [Data modelling](/data-engineering/data-modelling.qmd)
+- [Version control with git](/git/index.qmd)
+- [Programming with Python](/python/index.qmd)
+- [Using dbt (Data Build Tool)](/data-engineering/dbt.qmd)

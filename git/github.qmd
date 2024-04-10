@@ -1,0 +1,11 @@
+---
+title: "Using Github"
+---
+
+GitHub is a web-based platform that provides a centralised location where developers can store, share, and collaborate on code. Users can create repositories to host their code, which can then be accessed and modified by other contributors. Companies House has a Github organisation [here](https://github.com/companieshouse).
+
+In the past, the team has used a [monorepo](https://monorepo.tools/). This is where multiple, distinct projects sit within a single repository. Sometimes, different branches are used as a way to differentiate or separate projects. The challenge with monorepos, especially when people are new to using Git, is that there is a lot more activity on the monorepo due to everything being in one place. So much activity in one place can make things more difficult to follow.
+
+We would recommend that a new repository be created for each new, distinct project. This means avoiding monorepos, and avoiding things like creating a repo per team, where all the team's code lives.
+
+> TODO: Workflow. Pull requests.

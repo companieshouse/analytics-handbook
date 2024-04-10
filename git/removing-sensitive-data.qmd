@@ -1,0 +1,23 @@
+---
+title: "Removing sensitive data"
+---
+
+It is possible to accidentally publish sensitive information to Github. This section will show you how prevent publishing sensitive data, and remove sensitive info from your GitHub repository.
+
+## Avoiding accidental commits of sensitive data
+
+It's important to keep sensitive information like passwords or personal data from accidentally ending up in your code. One way to avoid this is by [using a `.gitignore` file](https://www.atlassian.com/git/tutorials/saving-changes/gitignore). This file tells Git to ignore certain files or folders, and so prevents them from being committed. Secret files or folders must be listed in the `.gitignore` file.
+
+Another approach is to use `.env` files. These are text files where you can store important info such as passwords or API keys, without putting them directly into your code. By putting your sensitive info in an `.env` file, you keep it separate and safe. The `.env` file should be listed in the `.gitignore` to prevent it from being committed.
+
+## What to do if sensitive data has been published
+
+::: {.callout-warning}
+## Important
+
+The [Github guidance](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/removing-sensitive-data-from-a-repository) for removing sensitive data can be difficult to follow, but **it is important that it is followed exactly** so that no sensitive data accidentally remains published.
+
+Workarounds such as deleting files manually, deleting branches or deleting pull requests will not work, as Github retains all history. Performing workarounds can make it more difficult to ensure sensitive data is correctly removed.
+
+Do not attempt workarounds if you struggle to follow the guidance. Seek help from someone to work through the guidance.
+:::

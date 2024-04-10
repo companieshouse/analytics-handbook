@@ -1,0 +1,41 @@
+---
+title: "Reviewing SQL Queries"
+---
+
+> TODO: Common things to look for when quality assuring an SQL query.
+
+## Keep IDs in extracts
+
+When extracting data from a database, it is often useful to keep the IDs of records in the extract, even if customers do not request them explicitly. This can be useful for debugging, and for cross-referencing with other data sources.
+
+## Choose a small number of records and check the results
+
+Consider running your query with a WHERE clause to your query to only select records relating to a particular company. Where queries summarise `COUNT`s of many records, consider testing what the query does without the `COUNT` and observing each individual record.
+
+The results of the query may be able to be cross referenced with [information on CHS](https://find-and-update.company-information.service.gov.uk/) to make sure the query is returning the expected result.
+
+## Explicitly select columns
+
+Underlying tables may change over time and the number and order of columns may change. If you do not explicitly select columns, your query may break when the underlying table changes. Avoid using `SELECT *` in production code.
+
+## Check joins 
+
+Take particular care to check the use of `LEFT JOIN`, `RIGHT JOIN`, `INNER JOIN`, and `OUTER JOIN` for correctness. Understand one-to-many or many-to-many relationships between tables to be sure that joins do not unexpectedly introduce multiple or duplicate records.
+
+Favour writing queries to use `LEFT JOIN` over `RIGHT JOIN` where possible.
+
+Ensure that joins account for potential NULL values. Using an `INNER JOIN` with a condition that may result in NULL values will result in the loss of rows. Where NULLs may be present, consider whether a `LEFT JOIN` is appropriate.
+
+## Check the use of distinct
+
+Duplicate rows can be a sign of a problem with a query. If you are using `DISTINCT` to remove duplicates, you should check the query to ensure that the duplicates are not a sign of a problem with the query. You should be able to explain why the duplicates are present and why it is safe to remove them.
+
+## Check unions of datasets
+
+When combining the results of two queries, favour the use of `UNION ALL` over `UNION` unless you specifically want to remove duplicates. The `UNION` operator is more computationally expensive than `UNION ALL` because it removes duplicates, and may hide problems with the query due to there being duplicate rows.
+
+If you are using `UNION` to remove duplicates, you should be able to explain why the duplicates are present and why it is safe to remove them.
+
+## Time intervals
+
+Check filters on dates to check whether the dates should be excluded or included.

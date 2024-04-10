@@ -1,0 +1,14 @@
+---
+title: "Reproducible analytical pipelines"
+---
+
+We work in a team where people use different languages and development environments, along with different types of computers, like Macs or Windows. Because nobody's set up is exactly the same, it's really important that we take care to ensure everyone can reproduce the analysis and run the code we create. 
+
+Reproducibility means making sure that the way we write our code lets anyone on the team rerun it and get the same results, no matter what computer they're using. This way, we're not just coding for ourselves; we're making sure everyone can understand and use our work, which ultimately helps us collaborate better.
+
+## Links
+
+- [Building reproducible analytical pipelines with R](https://raps-with-r.dev/)
+- [The Turing Way: Guide for Reproducible Research](https://book.the-turing-way.org/reproducible-research/reproducible-research)
+
+> TODO: What advice do we have on reproducibility. [Use relative filepaths](/programming-practices.qmd#use-relative-filepaths). Write documentation. Write tests.

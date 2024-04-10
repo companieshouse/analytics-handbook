@@ -1,0 +1,47 @@
+---
+title: "Version control with Git"
+---
+
+Git is a version control system that tracks changes in computer files. It allows multiple people to work on the same project simultaneously without stepping on each other's toes. With Git, you can see who made what changes and when, and you can easily revert back to previous versions if something goes wrong.
+
+Github is a platform built around Git that provides hosting for software development projects. It allows users to store their Git repositories online and provides tools for collaboration, such as issue tracking, code review, and project management. 
+
+## Links
+
+- [What is the difference between Git and GitHub?](https://stackoverflow.com/questions/13321556/difference-between-git-and-github)
+- [Happy Git and GitHub for the useR](https://happygitwithr.com/): This resource provides guidance on using Git and GitHub specifically tailored for R users. It covers topics such as setting up Git, basic commands, collaboration workflows, and best practices for using Git with R projects.
+- [Git by Example](https://antonz.org/git-by-example/): This website offers practical examples and tutorials for learning Git.
+- [Introduction to Git and GitHub](https://intro-git-github.nhsrcommunity.com/): This resource provides an introduction to Git and GitHub created by the NHS R community.
+- [Dangit, Git!?!](https://dangitgit.com/): Dangit, Git!?! is a collection of Git tutorials and resources designed to help users overcome common Git mistakes.
+
+## Set up Git
+
+> TODO: Set username and email. Set up SSH keys.
+
+## Commits
+
+We generally follow the principles set out [in this guidance](https://cbea.ms/git-commit/).
+
+> 1. Separate subject from body with a blank line
+> 1. **Limit the subject line to [_72_](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/tree/Documentation/process/submitting-patches.rst?id=bc7938deaca7f474918c41a0372a410049bd4e13#n664) characters**
+> 1. **Capitalize the subject line**
+> 1. **Do not end the subject line with a period**
+> 1. **Use the imperative mood in the subject line**
+> 1. Wrap the body at 72 characters
+> 1. Use the body to explain what and why vs. how
+
+A commit is made up of a subject and a body. In many cases, commits should be small and simple enough that only a subject line is needed, so those recommendations in bold above are most relevant.
+
+Using the imperative mood in Git commits means framing your commit messages as present-tense commands or instructions rather than descriptions, e.g. `Fix spelling mistake` instead of `Fixed spelling mistake`.
+
+### Undoing a commit
+
+> TODO: Using git reset, or doing an amend.
+
+## Branches
+
+> TODO: Approach to naming branches. `kebab-case`.
+
+## Use `.gitignore` to ignore files
+
+A .gitignore file is used to tell Git which files or directories to ignore in a project. This means that any files or directories listed in this file won't be tracked by Git, so changes to them won't be included in commits. It's commonly used to exclude temporary files, build outputs, or sensitive information like passwords, ensuring that these aren't accidentally shared or clutter the project's history.

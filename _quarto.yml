@@ -1,0 +1,37 @@
+project:
+  type: confluence
+  preview:
+    port: 7777
+    browser: false
+
+website:
+  sidebar:
+    collapse-level: 1
+    contents:
+    - index.qmd
+    - what-should-i-learn.qmd
+    - getting-started.qmd
+    - writing-about-analysis.qmd
+    - programming-practices.qmd
+    - data-visualisation.qmd
+    - reproducible-analytical-pipelines.qmd
+    - quality-assurance.qmd
+    - auto: "*/*"
+
+format:
+  html:
+    theme: cosmo
+    fontcolor: "#1A1A1A"
+    toc: true
+    toc-expand: 1
+    include-in-header:
+      - text: |
+          <link rel="preconnect" href="https://fonts.googleapis.com" />
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+          <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap" rel="stylesheet" />
+    monofont: "Fira Code"
+
+knitr:
+  opts_chunk: 
+    collapse: true
+    comment: "#>" 

@@ -1,0 +1,120 @@
+---
+title: "Writing markdown"
+---
+
+---
+title: "Writing with Markdown"
+---
+
+Markdown is a lightweight markup language that is popular among writers, developers, and analysts for its simplicity and ease of use. It allows you to format text using plain text syntax that can be easily converted to HTML or other formats. Analysts often use Markdown to document analyses, write reports, and create reproducible research documents.
+
+[Markdown Guide](https://www.markdownguide.org/) is the most comprehensive resource for learning Markdown. It provides detailed instructions and examples for using Markdown to format text, create lists, tables, and more.
+
+### Headings
+
+Use the `#` symbol to create headings. The number of `#` symbols indicates the level of the heading.
+
+```markdown
+# Heading 1
+## Heading 2
+### Heading 3
+```
+
+### Emphasis
+
+To emphasise text, use asterisks (`*`) or underscores (`_`).
+
+- *Italic* text: `*italic*` or `_italic_`
+- **Bold** text: `**bold**` or `__bold__`
+
+### Lists
+
+#### Unordered Lists
+
+Create unordered lists using hyphens (`-`), asterisks (`*`), or plus signs (`+`).
+
+```markdown
+- Item 1
+- Item 2
+  - Subitem 2.1
+  - Subitem 2.2
+```
+
+#### Ordered Lists
+
+Create ordered lists using numbers followed by a period.
+
+```markdown
+1. First item
+2. Second item
+   1. Subitem 2.1
+   2. Subitem 2.2
+```
+
+### Links
+
+Create hyperlinks using square brackets for the text and parentheses for the URL.
+
+```markdown
+[Markdown Guide](https://www.markdownguide.org/)
+```
+
+### Images
+
+Embed images using an exclamation mark followed by square brackets for the alt text and parentheses for the URL.
+
+```markdown
+![Markdown logo](https://www.markdownguide.org/assets/images/tux.png)
+```
+
+### Blockquotes
+
+Create blockquotes using the `>` symbol.
+
+```markdown
+> This is a blockquote.
+> It can span multiple lines.
+```
+
+### Code
+
+Inline code can be created using backticks (`` ` ``).
+
+```markdown
+Use the `code` keyword to include code inline.
+```
+
+For code blocks, use triple backticks (` ``` `). You can also include the language name alongside the backticks, and some programs will attempt to provide syntax highlighting for that language.
+
+````markdown
+```python
+print("Hello, Markdown!")
+```
+````
+
+### Tables
+
+Create tables using pipes (`|`) and hyphens (`-`).
+
+```markdown
+| Column 1 | Column 2 | Column 3 |
+|----------|----------|----------|
+| Row 1    | Data     | More data|
+| Row 2    | Data     | More data|
+```
+
+### Horizontal Rules
+
+Create horizontal rules using three or more hyphens (`---`), asterisks (`***`), or underscores (`___`).
+
+```markdown
+---
+```
+
+## Links
+
+- [Markdown Guide](https://www.markdownguide.org/): A comprehensive resource for learning Markdown, with examples and syntax explanations.
+- [Daring Fireball: Markdown](https://daringfireball.net/projects/markdown/): The original Markdown documentation by John Gruber.
+- [Markdown Cheat Sheet](https://www.markdownguide.org/cheat-sheet/): A quick reference guide for Markdown syntax.
+- [CommonMark](https://commonmark.org/): A strongly defined, highly compatible specification of Markdown.
+- [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/): An extension of Markdown used on GitHub, with additional features like task lists and tables.

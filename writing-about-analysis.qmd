@@ -1,0 +1,66 @@
+---
+title: "Writing about analysis"
+---
+
+There are lots of helpful resources available for writing plainly and writing about analysis. This page brings together some of the most useful resources.
+
+## Links
+
+- [Writing for GOV.UK](https://www.gov.uk/guidance/content-design/writing-for-gov-uk): This resource offers guidance on content design and writing specifically tailored for GOV.UK. It provides best practices for creating clear and accessible content.
+- [GOV.UK style guide](https://www.gov.uk/guidance/style-guide/a-to-z-of-gov-uk-style): This guide outlines the style conventions and standards used across GOV.UK. It covers various aspects of writing, including grammar, punctuation and formatting.
+- [Words to watch](https://service-manual.ons.gov.uk/content/language/words-to-watch) from ONS covers grammar rules which often trip up writers.
+- [Overview of technical writing courses](https://developers.google.com/tech-writing/overview): This guide from Google offers comprehensive recommendations for technical writing. It covers writing style, structure, and formatting to enhance the readability and usability of technical content.
+- [Accessible Numbers](https://accessiblenumbers.com/): This website focuses on making numerical information accessible to a wide audience, including people with disabilities. It provides guidelines and resources for presenting numbers in a clear and understandable manner.
+- [How to give a presentation involving numbers](https://www.americanexpress.com/en-us/business/trends-and-insights/articles/how-to-give-a-presentation-involving-numbers/): This article by American Express provides tips for delivering presentations that involve numbers and data. It offers advice for structuring presentations, visualising data effectively, and engaging with the audience when presenting numbers.
+
+## Use the active voice
+
+[Active voice](https://developers.google.com/tech-writing/one/active-voice) sentences are direct and easier to understand because they follow a simple format: subject + verb + object.
+
+This sentence of made-up statistics is written in the passive voice:
+
+> The number of new jobs created was found to be higher in the urban areas compared to rural areas, with a 10% increase observed from January 2024 to March 2024. A decrease of 5% in employment rates within suburban areas was observed over the same period.
+
+The first sentence is describing job creation in urban areas. The second sentence is describing employment rates in suburban areas. We can rewrite this example using the active voice by placing the subjects at the start of the sentence.
+
+> New job creation in urban regions increased by 10% compared to rural regions from January 2024 to March 2024. Similarly, employment rates within suburban areas decreased by 5% over the same period.
+
+## Use plain English
+
+The Government Digital Service (GDS) have published guidance on [writing in plain English](https://www.gov.uk/guidance/content-design/writing-for-gov-uk#plain-english) and a [style guide](https://www.gov.uk/guidance/style-guide/a-to-z-of-gov-uk-style) for writing for GOV.UK.
+
+> Good online content is easy to read and understand.
+> 
+> It uses:
+> 
+> - short sentences
+> - sub-headed sections
+> - simple vocabulary
+>
+> This helps people find what they need quickly and absorb it effortlessly.
+> 
+> The main purpose of GOV.UK is to provide information - there’s no excuse for putting unnecessarily complicated writing in the way of people’s understanding.
+
+This [example from The Pudding](https://pudding.cool/2022/02/plain/) gives examples of translating more complex writing into plain English. When we simplify examples to make them easier to understand we might lose important details, especially when writing about analysis, but there are situations where we need to include complexity to fully explain things. While it may not be appropriate to simplify our writing to this extent, the examples are a good reminder that we should aim to write in a way that is accessible to our readers.
+
+GDS also provide some advice on [how to write for technical or specialist audiences](https://www.gov.uk/guidance/content-design/writing-for-gov-uk#writing-specialists), which also recommends using plain English.
+
+[Words to watch](https://service-manual.ons.gov.uk/content/language/words-to-watch) from ONS covers grammar rules which often trip up writers. 
+
+## Words to avoid
+
+GDS have published a list of [words to avoid](https://www.gov.uk/guidance/style-guide/a-to-z-of-gov-uk-style#words-to-avoid) when writing for GOV.UK. This includes words that are difficult to understand, or the sorts of jargon which are unhelpful when trying to communicate clearly.
+
+## Consider how to use numbers
+
+[Accessible Numbers](https://accessiblenumbers.com/) gives guidance on how to use numbers in a way that are accessible to everyone. It provides about building digital services which involve numbers, in a way that is accessible to people with dyscalculia or low numeracy skills, but this advice can be applied to writing about numbers or creating data products such as dashboards.
+
+It provides the following advice advice:
+
+> 1. Consider users with [dyscalculia, low numeracy and maths anxiety](https://accessiblenumbers.com/about-dyscalculia-low-numeracy-and-maths-anxiety)
+> 1. [Round up numbers and remove unnecessary content]((https://accessiblenumbers.com/round-up-numbers))
+> 1. [Leave space around numbers](https://accessiblenumbers.com/leave-space-around-numbers) so that numbers don’t jump around so much on the screen
+> 1. [Fill in the information we already have](https://accessiblenumbers.com/fill-in-the-information-you-have) and not expect people to remember reference numbers 
+> 1. [Explain what numbers mean](https://accessiblenumbers.com/explain-what-numbers-mean) and add context about why the numbers matter
+> 1. [Let people make mistakes when entering numbers](https://accessiblenumbers.com/let-people-make-mistakes-when-entering-numbers)
+> 1. [Involve people who struggle with numbers](https://accessiblenumbers.com/research-with-people-with-dyscalculia) in the design process, from both within and outside the design teams

@@ -1,0 +1,90 @@
+---
+title: "Visual Studio Code"
+---
+
+Visual Studio Code, also commonly referred to as VS Code, is a source-code editor developed by Microsoft.
+
+## Using the command palette
+
+The [command palette](https://code.visualstudio.com/docs/getstarted/userinterface#_command-palette) is like a search bar for the code editor. It enables quick access to execute various commands and features within VS Code without needing to navigate through menus or remember specific keyboard shortcuts.
+
+The command palette is opened with the <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd> shortcut or from the `View` menu. Typing into the palette will present relevant options.
+
+## Extensions
+
+VS Code has many extensions which improve the development experience in different languages. Microsoft has documentation on [how to browse and install extensions](https://code.visualstudio.com/docs/editor/extension-marketplace).
+
+We recommend installing these extensions:
+
+- [Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
+- [Black Formatter](https://marketplace.visualstudio.com/items?itemName=ms-python.black-formatter)
+- [Jupyter](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter)
+- [R](https://marketplace.visualstudio.com/items?itemName=REditorSupport.r)
+- [R Debugger](https://marketplace.visualstudio.com/items?itemName=RDebugger.r-debugger)
+- [Quarto](https://marketplace.visualstudio.com/items?itemName=quarto.quarto)
+- [Snowflake](https://marketplace.visualstudio.com/items?itemName=snowflake.snowflake-vsc)
+- [Oracle](https://marketplace.visualstudio.com/items?itemName=Oracle.oracledevtools)
+- [dbt Power User](https://marketplace.visualstudio.com/items?itemName=innoverio.vscode-dbt-power-user)
+- [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
+
+## Settings
+
+Microsoft [has documentation](https://code.visualstudio.com/docs/getstarted/settings) on applying settings to VS Code. Settings can be applied through a menu, though under the hood they are stored in a JSON file. This file can be accessed by clicking the gear icon in the sidebar, by using the <kbd>Ctrl</kbd> + <kbd>,</kbd> shortcut or navigating to `File > Preferences > Settings`.
+
+Consider installing a font with ligatures, such as [Fira Code](https://github.com/tonsky/FiraCode) or [Cascadia Code](https://github.com/microsoft/cascadia-code).
+
+This is an example of settings we recommend:
+
+```json
+{
+  "editor.rulers": [80, 120],
+  "editor.fontFamily": "Fira Code",
+  "editor.fontLigatures": true,
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.black-formatter",
+    "editor.formatOnType": true,
+    "editor.formatOnSave": true
+  },
+  "python.terminal.executeInFileDir": true,
+  "notebook.formatOnSave.enabled": true,
+  "[r]": {
+    "editor.defaultFormatter": "REditorSupport.r",
+    "editor.formatOnType": true,
+    "editor.formatOnSave": true,
+    "editor.tabSize": 2
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnType": true,
+    "editor.formatOnSave": true
+  },
+  "[markdown]": {
+    "editor.wordWrap": "on",
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
+}
+```
+
+## Using R in VS Code
+
+Many R users may prefer to use [RStudio](/integrated-development-environments/rstudio.qmd), however it is possible to use R within VS Code. To use R in VS Code it is recommended to follow Microsoft's documentation on [setting up R in VS Code](https://code.visualstudio.com/docs/languages/r#_getting-started).
+
+Install the [R extension for VS Code](https://marketplace.visualstudio.com/items?itemName=REditorSupport.r):
+
+```ps
+code --install-extension REditorSupport.r
+code --install-extension RDebugger.r-debugger
+```
+
+Install radian using `pip`:
+
+```ps
+pip3 install -U radian
+```
+
+From R install the following packages:
+
+```r
+install.packages("languageserver")
+install.packages("httpgd")
+```

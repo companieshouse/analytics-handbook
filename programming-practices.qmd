@@ -1,0 +1,99 @@
+---
+title: "General programming practices"
+---
+
+Analysts regularly work with code and data. This section provides guidance on how to write code and manage data in a way that is consistent, clear, and easier to maintain.
+
+## Follow language style guides
+
+Many languages have their own style guides to deal with their specific syntax. We provide recommendations for:
+
+- [SQL](/sql/style-guide.qmd)
+- [Python](/python/style-guide.qmd)
+- [R](/r/style-guide.qmd)
+
+There are code formatting and linting tools which help enforce style conventions, and we should use these wherever possible.
+
+Many practices are common across multiple programming languages. In general:
+
+- Aim for a balance between readability and conciseness in your code.
+- Break down complex tasks into smaller, manageable functions or modules.
+- Prioritise code clarity and maintainability over cleverness or brevity.
+- Regularly refactor and review your code to improve its structure and efficiency.
+- Follow consistent naming conventions for variables, functions, and classes, such as using `snake_case`.
+- Write code which is self describing, for example by using verbs for function names.
+- Test your code thoroughly to catch bugs early and ensure robustness.
+- Embrace version control systems like Git to track changes and collaborate effectively.
+- Document your code clearly, including descriptions and usage examples.
+- Continuously seek feedback and learn from experienced analysts to improve your skills.
+
+## Use kebab case for file and directory names
+
+`kebab-case` is a naming convention where words are written in lowercase and separated by hyphens. An example of kebab case is `my-file-name.csv`.
+
+We use kebab case for file names, directory names and git repositories and branches.
+
+## Dates and times
+
+We may find ourselves needing to include a date in filenames to indicate when the file was created - for example if we run a weekly report. It is best to begin any file names which require it with a date in the format of `YYYY-MM-DD`, for example `2024-03-01-incorporations.csv`. When sorting these files alphabetically, the file with an earlier date will appear first.
+
+This follows ISO 8601, an internationally recognised standard for representing dates, times, and time intervals in a clear and unambiguous manner across different systems and cultures.
+
+| ISO Format     | Example              | Format                 |
+|----------------|----------------------|------------------------|
+| Year           | 2024                 | `YYYY`                 |
+| Year-Month     | 2024-03              | `YYYY-MM`              |
+| Date           | 2024-03-18           | `YYYY-MM-DD`           |
+| Date-Time      | 2024-03-18T12:00:00  | `YYYY-MM-DDTHH:mm:ss`  |
+| Week           | 2024-W11             | `YYYY-Www`             |
+| Quarter        | 2024-Q1              | `YYYY-Qn`              |
+
+[ISO weeks](https://en.wikipedia.org/wiki/ISO_week_date) do not always start on 1 January, and week one may include several days from the previous year. A year may have 52 or 53 ISO weeks.
+
+## Use relative filepaths
+
+Absolute filepaths provide the full path from the root directory, starting with symbols like `/` in Unix or `C:` in Windows. For example, `/home/user/documents/example.txt` or `C:\Users\User\Documents\example.txt`.
+
+Relative filepaths specify the path relative to the current working directory. As an example, if the current working directory was `/home/user/`, we could write
+
+```r
+read_csv("documents/example.csv")
+```
+
+to read the file located at `/home/user/documents/example.csv`.
+
+Using absolute paths makes it likely that someone else trying to run your code won't be able to - as their usernames and folder structures are going to be different. [R for Data Science provides this advice](https://r4ds.hadley.nz/workflow-scripts.html#relative-and-absolute-paths):
+
+> You should never use absolute paths in your scripts, because they hinder sharing: no one else will have exactly the same directory configuration as you.
+
+## Create tidy data
+
+[Tidy data](https://r4ds.hadley.nz/data-tidy#sec-tidy-data) is a name for a data structure made popular by the R community. Data can often be found organised in many different ways, but a standard layout makes it easier to work with. Tidy data has the following properties:
+
+1. Each variable forms a column.
+2. Each observation forms a row.
+3. Each type of observational unit forms a table.
+
+Tidy data is often long rather than wide. For example, a table with columns for each individual year is not tidy, but a table with a column for year and a column for value is tidy. Cross tabulations and pivot tables are not tidy data, but can be created from tidy data.
+
+The following table is a cross tabulation of location by year.
+
+|             | 2020 | 2021 | 2022 |
+|-------------|------|------|------|
+| **Wales**   |   10 |  15  |    5 |
+| **England** |    7 |  12  |    3 |
+| **Unknown** |    3 |   2  |    1 |
+
+The table can be made tidy through pivoting. The column names, which represent years, are turned into a variable called `year`.
+
+| location | year  | count |
+|----------|-------|-------|
+| Wales    | 2020  |    10 |
+| Wales    | 2021  |    15 |
+| Wales    | 2022  |     5 |
+| England  | 2020  |     7 |
+| England  | 2021  |    12 |
+| England  | 2022  |     3 |
+| Unknown  | 2020  |     3 |
+| Unknown  | 2021  |     2 |
+| Unknown  | 2022  |     1 |

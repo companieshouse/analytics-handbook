@@ -1,0 +1,10 @@
+---
+title: "Programming with Python"
+---
+
+Python is a flexible programming language that serves many purposes beyond data analysis. For example, much of [Spotify is written in Python](https://labs.spotify.com/2013/03/20/how-we-use-python-at-spotify/). Python is popular with data scientists and data engineers, often due to it being a language which is also common among software engineers.
+
+## Links
+
+- [Python for Data Analysis](https://wesmckinney.com/book/) is a helpful resource written by the author of the most popular analysis library in Python, called Pandas.
+

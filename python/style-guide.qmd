@@ -1,0 +1,5 @@
+---
+title: "Python style guide"
+---
+
+> TODO: How to use `black` or `ruff` to lint and format Python code. Is there Data Science guidance on this already?

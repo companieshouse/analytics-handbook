@@ -1,0 +1,5 @@
+---
+title: "SQL style guide"
+---
+
+> TODO: How to use `sqlfluff` for linting and formatting SQL. How to set up SQL to properly lint Oracle SQL. Common table expressions (CTEs). Capitals vs. lowercase.

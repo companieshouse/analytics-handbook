@@ -1,0 +1,11 @@
+---
+title: "Integrated development environments (IDEs)"
+---
+
+Integrated Development Environments (IDEs) are tools for coding. They bring together everything needed for writing, testing, and fixing code.
+
+[Visual Studio Code (VS Code)](/integrated-development-environments/vscode.qmd) is a popular IDE for various coding tasks. It supports many programming languages and is highly customisable and extendable.
+
+Some analysts, particularly R users, may prefer [RStudio](/integrated-development-environments/rstudio.qmd). RStudio is tailored for R users but can also handle Python and other languages.
+
+We have guidance on setting up [VS Code](/integrated-development-environments/vscode.qmd) and [RStudio](/integrated-development-environments/rstudio.qmd).

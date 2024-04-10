@@ -1,0 +1,10 @@
+---
+title: "Writing documents with Quarto"
+---
+
+> TODO: What is Quarto. Signpost to resources. When to Quarto vs. Python / R Notebooks.
+
+
+## Links
+
+- https://r4ds.hadley.nz/quarto

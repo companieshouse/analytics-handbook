@@ -1,0 +1,15 @@
+---
+title: "RStudio"
+---
+
+RStudio is a powerful integrated development environment (IDE) designed specifically for data analysis. It is primarily used with R, though supports Python and other languages too.
+
+Posit, the makers of RStudio, have a good introduction to using RStudio [here](https://docs.posit.co/ide/user/ide/get-started/).
+
+## Links
+
+- [Getting started](https://docs.posit.co/ide/user/ide/get-started/) walks through an example of using the ggplot2 R package and RStudio for basic data visualisation.
+
+## Settings
+
+We highly recommend unchecking the `Restore .RData into workspace at startup:` under `Tools > Global Options > General`.

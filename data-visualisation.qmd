@@ -1,0 +1,197 @@
+---
+title: "Data visualisation"
+---
+
+This section provides guidance on creating data visualisations, covering things such as choosing the right colours, creating accessible visualisations and following brand guidelines.
+
+## Links
+
+The Analysis Function has created a lot of guidance on data visualisation.
+
+- [Charts: a checklist](https://analysisfunction.civilservice.gov.uk/policy-store/charts-a-checklist/)
+- [Data visualisation e-learning](https://analysisfunction.civilservice.gov.uk/support/communicating-analysis/introduction-to-data-visualisation-e-learning/)
+- [Data visualisation: colours](https://analysisfunction.civilservice.gov.uk/policy-store/data-visualisation-colours-in-charts)
+- [Data visualisation: tables](https://analysisfunction.civilservice.gov.uk/policy-store/data-visualisation-tables/)
+- [Data visualisation: infographics](https://analysisfunction.civilservice.gov.uk/policy-store/infographics/)
+- [Releasing statistics in spreadsheets](https://analysisfunction.civilservice.gov.uk/policy-store/releasing-statistics-in-spreadsheets/)
+- [Using symbols and shorthand](https://analysisfunction.civilservice.gov.uk/policy-store/symbols-in-tables-definitions-and-help/)
+- [Making analytical publications accessible](https://analysisfunction.civilservice.gov.uk/policy-store/making-analytical-publications-accessible/)
+
+The Analysis Function also recommends these resources:
+
+- [Colour contrast checker](https://webaim.org/resources/contrastchecker/)
+- [Andy Cotgreave’s video on dashboards](https://www.youtube.com/watch?v=tkkNIphOT8o)
+- [Dundas Data Visualisation comparison between reports and dashboards](https://www.youtube.com/watch?v=LsTVqR2htrI)
+- [Ryan Dunn’s article Dash-bored](https://drryandunn.medium.com/dash-bored-f0c460a240e6)
+- [4 design principles for creating better dashboards](https://www.sisense.com/en-gb/blog/4-design-principles-creating-better-dashboards/)
+- [10 rules for better dashboard design](https://uxplanet.org/10-rules-for-better-dashboard-design-ef68189d734c)
+
+## Branding
+
+> TODO: Adapt Corporate Performance visualisation guidance into generic visualisation guidance. Include advice on fonts, colour palette, branding.
+
+### Companies House colours
+
+<table class="table"> 
+  <thead>
+    <tr class="header">
+      <th>Colour Name</th>
+      <th>Hex Code</th>
+      <th>RGB</th>
+      <th>Colour Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>CHN1</td>
+      <td>#1A1A1A</td>
+      <td>26, 26, 26</td>
+      <td class="color-example" style="background-color:#1A1A1A;">&nbsp;</td>
+    </tr>
+    <tr>
+      <td>CHN2</td>
+      <td>#F1F1F1</td>
+      <td>241, 241, 241</td>
+      <td class="color-example" style="background-color:#F1F1F1;">&nbsp;</td>
+    </tr>
+    <tr>
+      <td>CHN3</td>
+      <td>#CD1423</td>
+      <td>205, 20, 35</td>
+      <td class="color-example" style="background-color:#CD1423;">&nbsp;</td>
+    </tr>
+  </tbody>
+</table>
+
+### Qualitative
+
+<table class="table">
+  <thead>
+    <tr class="header">
+      <th>Colour Name</th>
+      <th>Hex Code</th>
+      <th>RGB</th>
+      <th>Colour Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Dark blue</td>
+      <td>#12436D</td>
+      <td>(18, 67, 109)</td>
+      <td style="background-color: #12436d">
+        <span aria-hidden="true"></span>
+      </td>
+    </tr>
+    <tr>
+      <td>Turquoise</td>
+      <td>#28A197</td>
+      <td>(40, 161, 151)</td>
+      <td class="color-example" style="background-color: #28a197">
+        <span aria-hidden="true"></span>
+      </td>
+    </tr>
+    <tr>
+      <td>Dark pink</td>
+      <td>#801650</td>
+      <td>(128, 22, 80)</td>
+      <td class="color-example" style="background-color: #801650">
+        <span aria-hidden="true"></span>
+      </td>
+    </tr>
+    <tr>
+      <td>Orange</td>
+      <td>#F46A25</td>
+      <td>(244, 106, 37)</td>
+      <td class="color-example" style="background-color: #f46a25">
+        <span aria-hidden="true"></span>
+      </td>
+    </tr>
+    <tr>
+      <td>Dark grey</td>
+      <td>#3D3D3D</td>
+      <td>(61, 61, 61)</td>
+      <td class="color-example" style="background-color: #3d3d3d">
+        <span aria-hidden="true"></span>
+      </td>
+    </tr>
+    <tr>
+      <td>Light purple</td>
+      <td>#A285D1</td>
+      <td>(162, 133, 209)</td>
+      <td class="color-example" style="background-color: #a285d1">
+        <span aria-hidden="true"></span>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+### Sequential
+
+<table class="table">
+  <thead>
+    <tr class="header">
+      <th>Colour Name</th>
+      <th>Hex Code</th>
+      <th>RGB</th>
+      <th>Colour Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Dark blue</td>
+      <td>#12436D</td>
+      <td>(18, 67, 109)</td>
+      <td class="color-example" style="background-color: #12436d">
+        <span aria-hidden="true"></span>
+      </td>
+    </tr>
+    <tr>
+      <td>Mid blue</td>
+      <td>#2073BC</td>
+      <td>(32, 115, 188)</td>
+      <td class="color-example" style="background-color: #2073bc">
+        <span aria-hidden="true"></span>
+      </td>
+    </tr>
+    <tr>
+      <td>Light blue</td>
+      <td>#6BACE6</td>
+      <td>(107, 172, 230)</td>
+      <td class="color-example" style="background-color: #6bace6">
+        <span aria-hidden="true"></span>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+### Focus
+
+<table class="table">
+  <thead>
+    <tr class="header">
+      <th>Colour Name</th>
+      <th>Hex Code</th>
+      <th>RGB</th>
+      <th>Colour Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Dark blue</td>
+      <td>#12436D</td>
+      <td>(18, 67, 109)</td>
+      <td class="color-example" style="background-color: #12436d">
+        <span aria-hidden="true"></span>
+      </td>
+    </tr>
+    <tr>
+      <td>Grey</td>
+      <td>#BFBFBF</td>
+      <td>(191, 191, 191)</td>
+      <td class="color-example" style="background-color: #bfbfbf">
+        <span aria-hidden="true"></span>
+      </td>
+    </tr>
+  </tbody>
+</table>

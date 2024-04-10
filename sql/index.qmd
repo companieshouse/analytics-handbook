@@ -1,0 +1,36 @@
+---
+title: "Using SQL"
+---
+
+SQL is a query language used to interact with databases. It's used to perform a wide variety of tasks, such as querying data, modifying data, and creating and modifying the structure of databases and tables.
+
+Different databases may have different flavours of SQL. While they all follow the same basic principles, they often have slight differences in syntax. This means that what works in one database might not work the same way in another.
+
+SQL can be used directly other languages such as R and Python, and a lot of the native data wrangling libraries in these languages (e.g. `dplyr` in R and `pandas` in Python) are inspired by SQL. This makes SQL a useful skill to know in addition to other programming languages.
+
+## Links
+
+- https://selectstarsql.com/
+
+
+## Basic query
+
+A basic SQL query may look like this:
+
+```sql
+SELECT * 
+FROM my_table
+WHERE column = 'value'
+LIMIT 10;
+-- This is a comment. It's ignored by the database.
+```
+
+- `SELECT` specifies which columns to select from a table called `my_table`. The asterisk `(*)` is a wildcard that represents all columns in the table.
+- `FROM` specifies the source of the data, which is the table named `my_table`.
+- `WHERE` acts as a filter, restricting the rows returned based on a specific condition. In this case, we're filtering rows where the value in the column named `column` is equal to the string `'value'`.
+- `LIMIT` restricts the result set to only the first 10 rows. This helps in scenarios where we're dealing with large datasets and only need to see a portion of the data.
+- Comments follow a double dash `--` and are ignored by the database.
+
+SQL statements are ended with a semicolon `;`. Not all database systems require this, but it's a good practice to include it to ensure proper execution and avoid errors, especially in scenarios where multiple statements are written together.
+
+In Oracle databases, the `LIMIT 10` clause is replaced by `FETCH FIRST 10 ROWS ONLY`, which serves the same purpose of limiting the result set to the first 10 rows.
